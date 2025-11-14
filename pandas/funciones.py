@@ -15,3 +15,13 @@ def  desviacion(NA, NC):
         return a
     except:
         return "Error al procesar la columna"
+
+def percentiles(NA, NC):
+    try:
+        NC=NA[NC]
+        p25 = NC.quantile(0.25)
+        p50 = NC.quantile(0.50)
+        p75 = NC.quantile(0.75)
+        return p25 , p50 , p75
+    except:
+        return "Error al procesar la columna"
