@@ -7,3 +7,11 @@ def promedio(NA,NC):
         return a/len(NC)
     except:
         return "Error al procesar la columna"
+    
+def  desviacion(NA, NC):
+    try:
+        NC=NA[NC]
+        a= NC.std()
+        return a
+    except:
+        return "Error al procesar la columna"
